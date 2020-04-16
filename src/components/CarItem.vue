@@ -178,4 +178,11 @@ export default {
 .car-detail .facilities-list i {
   color: #ff5200;
 }
+
+
+@media (max-width: 320px) {
+  .car-detail .facilities-list li {
+    width: 50%;
+  }
+}
 </style>

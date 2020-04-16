@@ -64,4 +64,32 @@
   opacity: 0.8;
   margin-bottom: 30px;
 }
+
+
+@media (max-width: 992px) {
+  .banner-item {
+    height: 75vh;
+  }
+  .banner-content h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-item {
+    height: 65vh;
+  }
+  .banner-content h1 {
+    font-size: 25px;
+  }
+
+}
+@media (max-width: 576px) {
+  .banner-content h1 {
+    font-size: 20px;
+  }
+  .banner-content p {
+    text-align: center;
+  }
+}
+
 </style>

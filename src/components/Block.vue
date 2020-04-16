@@ -39,4 +39,10 @@ export default {
   margin-bottom: 0;
   font-weight: 400;
 }
+
+@media (max-width: 768px) {
+  .block {
+    padding: 60px 0 30px;
+  }
+}
 </style>
