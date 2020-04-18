@@ -4,16 +4,16 @@
       <div class="search-box-inner">
         <form method="GET">
           <div class="row">
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
+            <search-item />
+            <search-item />
+            <search-item />
+            <search-item />
           </div>
 
           <div class="row">
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
+            <search-item />
+            <search-item />
+            <search-item />
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
               <div class="form-group">

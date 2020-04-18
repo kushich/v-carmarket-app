@@ -8,7 +8,7 @@
           eiusmod
         </p>
       </div>
-      <CarList />
+      <car-list />
     </div>
   </div>
 </template>

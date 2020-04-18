@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <Navbar />
+    <app-navbar />
     <router-view />
-    <Footer />
+    <app-footer />
   </div>
 </template>
 <script>
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import AppNavbar from './components/Navbar'
+import AppFooter from './components/Footer'
 export default {
   components: {
-    Navbar, Footer
-  }
+    AppNavbar,
+    AppFooter,
+  },
 }
 </script>
 
@@ -51,9 +52,9 @@ export default {
 }
 .btn-overlap:hover {
   color: #fff;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(255,132,0,1);
--moz-box-shadow: 0px 0px 10px 0px rgba(255,132,0,1);
-box-shadow: 0px 0px 10px 0px rgba(255,132,0,1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 132, 0, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 132, 0, 1);
+  box-shadow: 0px 0px 10px 0px rgba(255, 132, 0, 1);
 }
 .btn-ask {
   background-color: transparent;
@@ -64,9 +65,8 @@ box-shadow: 0px 0px 10px 0px rgba(255,132,0,1);
 }
 .btn-ask:hover {
   border-color: #212529;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.41);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.41);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.41);
 }
-
 </style>
