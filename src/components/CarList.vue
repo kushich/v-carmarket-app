@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <CarItem v-for="car in cars" :key="car.id" :car="car" />
+    <car-item v-for="car in cars" :key="car.id" :car="car" />
   </div>
 </template>
 

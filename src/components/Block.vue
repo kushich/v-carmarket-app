@@ -2,22 +2,18 @@
   <div class="block">
     <div class="container">
       <div class="block-title">
-        <h1>Featured Cars</h1>
+        <h1><slot name="title"></slot></h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod
+          <slot name="description"></slot>
         </p>
       </div>
-      <car-list />
+      <slot name="content"></slot>
     </div>
   </div>
 </template>
 <script>
-import CarList from '@/components/CarList'
 export default {
-  components: {
-    CarList
-  }
+  components: {},
 }
 </script>
 
