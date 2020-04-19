@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse w-100">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cars.html">Cars</a>
+              <router-link to="/cars" class="nav-link">Cars</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <router-link to="/" class="nav-link">Contact</router-link>
             </li>
           </ul>
         </div>

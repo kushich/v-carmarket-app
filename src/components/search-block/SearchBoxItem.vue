@@ -8,13 +8,13 @@
 
 <script>
 export default {
-  data() {
+  data: function() {
     return {
       selected: null,
       options: [
         { value: null, text: 'Select an option' },
         { value: 'a', text: '1' },
-        { value: 'b', text: '2' }
+        { value: 'b', text: '2' },
       ],
     }
   },
