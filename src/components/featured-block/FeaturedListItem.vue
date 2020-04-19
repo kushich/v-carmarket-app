@@ -2,40 +2,26 @@
   <div class="col-lg-4 col-md-6 col-12">
     <div class="car-box">
       <div class="car-thumbnail">
-        <div class="tag" :class="{active: car.tagActive}">{{car.tag}}</div>
+        <app-tag variant="primary" :tagActive="car.tagActive" :tagText="car.tag"/>
         <div class="price-box"><span>€</span>{{car.price}}<sub>/month</sub></div>
         <img :src="car.image" class="d-block w-100" alt="car" />
         <app-overlap :url="car.id"/>
       </div>
-
-      <div class="car-detail">
-        <h1 class="title">
-          <a href="">{{car.title}}</a>
-        </h1>
-        <div class="location">
-          <a href="">
-            <i class="fas fa-map-marker-alt"></i>
-            {{car.location}}
-          </a>
-        </div>
-        <ul class="facilities-list">
-          <li><i class="fas fa-road"></i> {{car.details.mileage}}</li>
-          <li><i class="fas fa-cogs"></i> {{car.details.transmission}}</li>
-          <li><i class="fas fa-industry"></i> {{car.details.year}}</li>
-          <li><i class="fas fa-gas-pump"></i> {{car.details.fuel}}</li>
-          <li><i class="fas fa-car"></i> {{car.details.body}}</li>
-          <li><i class="fas fa-tint"></i> {{car.details.color}}</li>
-        </ul>
-      </div>
+      <car-details :car="car"/>
     </div>
   </div>
 </template>
 
 <script>
+import CarDetails from '@/components/featured-block/CarDetails'
 import AppOverlap from '@/components/Overlap'
+import AppTag from '@/components/Tag'
+
 export default {
   components: {
-    AppOverlap
+    AppOverlap,
+    CarDetails,
+    AppTag
   },
   props: [
     'car'
@@ -115,74 +101,9 @@ export default {
   opacity: 0.9;
 }
 
-.tag {
-  float: left;
-  position: absolute;
-  transform: rotate(-45deg);
-  left: -60px;
-  top: 30px;
-  text-align: center;
-  width: 200px;
-  font-size: 12px;
-  margin: 0;
-  color: #fff;
-  font-weight: 500;
-  line-height: 32px;
-  background: #292929;
-  text-transform: uppercase;
-}
-.tag.active {
-  background: #ff5200;
-}
+
 .car-img {
   display: block;
 }
-.car-detail {
-  padding: 25px 20px 15px;
-}
-.car-detail .title {
-  font-size: 22px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-.car-detail .title a {
-  color: #ff5200;
-  text-decoration: none;
-}
-.car-detail .title a:hover {
-  color: #4d4d4d;
-}
-.car-detail .location {
-  margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: 400;
-}
-.car-detail .location a {
-  color: #535353;
-  text-decoration: none;
-}
-.car-detail .facilities-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-}
-.car-detail .facilities-list li {
-  list-style: none;
-  width: 33.3333%;
-  line-height: 35px;
-  font-weight: 400;
-  font-size: 14px;
-}
-.car-detail .facilities-list i {
-  color: #ff5200;
-}
 
-
-@media (max-width: 320px) {
-  .car-detail .facilities-list li {
-    width: 50%;
-  }
-}
 </style>
