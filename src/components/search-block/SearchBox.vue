@@ -4,16 +4,16 @@
       <div class="search-box-inner">
         <form method="GET">
           <div class="row">
-            <search-item />
-            <search-item />
-            <search-item />
-            <search-item />
+            <search-box-item />
+            <search-box-item />
+            <search-box-item />
+            <search-box-item />
           </div>
 
           <div class="row">
-            <search-item />
-            <search-item />
-            <search-item />
+            <search-box-item />
+            <search-box-item />
+            <search-box-item />
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
               <div class="form-group">
@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import SearchItem from '@/components/SearchItem'
+import SearchBoxItem from '@/components/search-block/SearchBoxItem'
 export default {
   components: {
-    SearchItem,
+    SearchBoxItem,
   },
 }
 </script>
@@ -41,5 +41,4 @@ export default {
   padding: 30px 0 10px;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 }
-
 </style>

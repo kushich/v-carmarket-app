@@ -5,11 +5,7 @@
         <div class="tag" :class="{active: car.tagActive}">{{car.tag}}</div>
         <div class="price-box"><span>€</span>{{car.price}}<sub>/month</sub></div>
         <img :src="car.image" class="d-block w-100" alt="car" />
-        <div class="carbox-overlap">
-          <div class="overlap-box">
-            <a href="#" class="btn btn-overlap btn-round btn-lg">Open</a>
-          </div>
-        </div>
+        <app-overlap :url="car.id"/>
       </div>
 
       <div class="car-detail">
@@ -36,7 +32,11 @@
 </template>
 
 <script>
+import AppOverlap from '@/components/Overlap'
 export default {
+  components: {
+    AppOverlap
+  },
   props: [
     'car'
   ]
@@ -73,27 +73,27 @@ export default {
   border-radius: 4px 4px 0 0;
   opacity: 1;
 }
-.car-thumbnail:hover .carbox-overlap {
-  opacity: 1;
-}
-.carbox-overlap {
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  width: 100%;
-  z-index: 999;
-  position: absolute;
-  text-align: center;
-  color: #fff;
-  left: 0;
-  top: 0;
-  transition: opacity 0.2s linear;
-}
-.overlap-box {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+// .car-thumbnail:hover .carbox-overlap {
+//   opacity: 1;
+// }
+// .carbox-overlap {
+//   opacity: 0;
+//   background: rgba(0, 0, 0, 0.6);
+//   height: 100%;
+//   width: 100%;
+//   z-index: 999;
+//   position: absolute;
+//   text-align: center;
+//   color: #fff;
+//   left: 0;
+//   top: 0;
+//   transition: opacity 0.2s linear;
+// }
+// .overlap-box {
+//   position: relative;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
 .price-box {
   font-size: 36px;
   font-weight: 700;

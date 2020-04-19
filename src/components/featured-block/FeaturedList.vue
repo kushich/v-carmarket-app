@@ -1,14 +1,14 @@
 <template>
   <div class="row">
-    <car-item v-for="car in cars" :key="car.id" :car="car" />
+    <featured-list-item v-for="car in cars" :key="car.id" :car="car" />
   </div>
 </template>
 
 <script>
-import CarItem from '@/components/CarItem'
+import FeaturedListItem from '@/components/featured-block/FeaturedListItem'
 export default {
   components: {
-    CarItem,
+    FeaturedListItem,
   },
   data: function() {
     return {

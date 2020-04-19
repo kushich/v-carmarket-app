@@ -1,6 +1,6 @@
 <template>
   <div>
-    <banner />
+    <app-banner />
     <search-box />
     <block>
       <template v-slot:title>
@@ -10,7 +10,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       </template>
       <template v-slot:content>
-        <car-list />
+        <featured-list />
       </template>
     </block>
     <block-alt variant="advantages">
@@ -24,26 +24,29 @@
         <advantages-list />
       </template>
     </block-alt>
+    <app-questions />
   </div>
 </template>
 
 <script>
-import CarList from '@/components/CarList'
-import AdvantagesList from '@/components/AdvantagesList'
-import Banner from '@/components/Banner'
-import SearchBox from '@/components/SearchBox'
+import FeaturedList from '@/components/featured-block/FeaturedList'
+import AdvantagesList from '@/components/advantages-block/AdvantagesList'
+import AppBanner from '@/components/Banner'
+import SearchBox from '@/components/search-block/SearchBox'
 import Block from '@/components/Block'
 import BlockAlt from '@/components/BlockAlt'
+import AppQuestions from '@/components/Questions'
 
 export default {
   name: 'Home',
   components: {
-    Banner,
+    AppBanner,
     SearchBox,
     Block,
     BlockAlt,
-    CarList,
+    FeaturedList,
     AdvantagesList,
+    AppQuestions,
   },
 }
 </script>
