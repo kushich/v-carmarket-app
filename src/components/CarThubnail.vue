@@ -4,7 +4,7 @@
     <car-price :period="period">{{ car.price }}</car-price>
 
     <img :src="car.image" class="d-block w-100" alt="car" />
-    <app-overlap :url="car.id" />
+    <app-overlap :url="'/cars/' + car.id" />
   </div>
 </template>
 <script>
