@@ -1,7 +1,7 @@
 <template>
   <div class="block">
     <div class="container">
-      <div class="block-title">
+      <div v-if="!empty" class="block-title">
         <h1><slot name="title"></slot></h1>
         <p>
           <slot name="description"></slot>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  props: ['empty'],
   components: {},
 }
 </script>
