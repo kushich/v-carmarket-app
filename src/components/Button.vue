@@ -1,5 +1,7 @@
 <template>
-  <a :href="url" class="btn" :class="options"><slot></slot></a>
+  <router-link tag="a" :to="url" class="btn" :class="options">
+    <slot></slot>
+  </router-link>
 </template>
 <script>
 export default {
