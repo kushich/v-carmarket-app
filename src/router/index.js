@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Error404 from '../views/Error.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +10,7 @@ const routes = [
     path: '*',
     name: 'error',
     meta: {layout:'empty'},
-    component: () => import('@/views/Error.vue'),
+    component: Error404,
   },
   {
     path: '/',
