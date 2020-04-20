@@ -4,23 +4,31 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
+  {
+    path: '*',
+    name: 'error',
+    meta: {layout:'empty'},
+    component: () => import('@/views/Error.vue'),
+  },
   {
     path: '/',
     name: 'home',
-    component: Home
+    meta: {layout:'main'},
+    component: Home,
   },
   {
     path: '/cars',
     name: 'cars',
-    component: () => import('@/views/Cars.vue')
-  }
+    meta: {layout:'main'},
+    component: () => import('@/views/Cars.vue'),
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router
