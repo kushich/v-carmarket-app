@@ -10,7 +10,7 @@
             <p>
               <slot name="description"></slot>
             </p>
-            <a href="#" class="btn btn-overlap btn-round btn-lg">Open</a>
+            <slot name="button"></slot>
           </div>
         </div>
         <div class="col-lg-7">

@@ -7,11 +7,20 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod
         </p>
-        <a href="#" class="btn btn-lg btn-round btn-theme">Read More</a>
+        <app-button url="/" options="round inline">Read More</app-button>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import AppButton from '@/components/Button'
+export default {
+  components: {
+    AppButton
+  }
+}
+</script>
 
 <style lang="scss">
 /* Banner */

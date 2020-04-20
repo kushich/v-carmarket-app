@@ -20,6 +20,9 @@
       <template v-slot:description>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       </template>
+      <template v-slot:button>
+        <app-button url="/" options="outline round">Open</app-button>
+      </template>
       <template v-slot:content>
         <advantages-list />
       </template>
@@ -36,6 +39,7 @@ import SearchBox from '@/components/search-block/SearchBox'
 import Block from '@/components/Block'
 import BlockAlt from '@/components/BlockAlt'
 import AppQuestions from '@/components/Questions'
+import AppButton from '@/components/Button'
 
 export default {
   name: 'Home',
@@ -47,6 +51,7 @@ export default {
     FeaturedList,
     AdvantagesList,
     AppQuestions,
+    AppButton
   },
 }
 </script>

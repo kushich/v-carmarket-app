@@ -17,7 +17,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
               <div class="form-group">
-                <button class="btn btn-block btn-theme btn-lg">Find</button>
+                <app-button url="/" options="block inline">Find</app-button>
               </div>
             </div>
           </div>
@@ -29,9 +29,11 @@
 
 <script>
 import SearchBoxItem from '@/components/search-block/SearchBoxItem'
+import AppButton from '@/components/Button'
+
 export default {
   components: {
-    SearchBoxItem,
+    SearchBoxItem, AppButton
   },
 }
 </script>

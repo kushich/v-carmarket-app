@@ -1,14 +1,18 @@
 <template>
   <div class="overlap">
     <div class="overlap-box">
-      <a :href="url" class="btn btn-overlap btn-round btn-lg">Open</a>
+      <app-button :url="url" options="outline round">Open</app-button>
     </div>
   </div>
 </template>
 
 <script>
+import AppButton from '@/components/Button'
 export default {
-  props: ['url']  
+  props: ['url'],
+  components: {
+    AppButton
+  }
 }
 
 </script>

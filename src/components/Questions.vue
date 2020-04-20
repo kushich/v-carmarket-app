@@ -6,13 +6,20 @@
           <h3 class="questions-text">Do You Have Questions?</h3>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-12">
-          <a href="#" class="btn btn-md btn-ask">Get in Touch</a>
+          <app-button url="/" options="semi-round outline white">Get In Touch</app-button>
         </div>
       </div>
     </div>
   </div>
 </template>
-
+<script>
+import AppButton from '@/components/Button'
+export default {
+  components: {
+    AppButton
+  }
+}
+</script>
 <style lang="scss" scoped>
 .questions {
   padding: 30px 0 25px;
@@ -21,7 +28,7 @@
 .questions-text {
   font-size: 27px;
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.3;
   color: #fff;
   font-weight: 400;
 }
