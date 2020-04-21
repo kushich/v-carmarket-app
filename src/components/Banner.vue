@@ -17,8 +17,8 @@
 import AppButton from '@/components/Button'
 export default {
   components: {
-    AppButton
-  }
+    AppButton,
+  },
 }
 </script>
 
@@ -29,7 +29,8 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url('../assets/banner-bg.jpg') no-repeat center;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,128,0,1) 50%, rgba(255,128,0,1) 100%)  no-repeat center;
+  background-image: url('../assets/banner-bg.jpg');
   background-size: cover;
   background-position: bottom;
 }
@@ -74,7 +75,6 @@ export default {
   margin-bottom: 30px;
 }
 
-
 @media (max-width: 992px) {
   .banner-item {
     height: 75vh;
@@ -90,7 +90,6 @@ export default {
   .banner-content h1 {
     font-size: 25px;
   }
-
 }
 @media (max-width: 576px) {
   .banner-content h1 {
@@ -100,5 +99,4 @@ export default {
     text-align: center;
   }
 }
-
 </style>
